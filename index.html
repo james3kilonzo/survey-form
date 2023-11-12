@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>CodingLab</title>
+</head>
+<body>
+
+  
+        <header class="header">
+            <div class="logo-details">
+                <i class='bx bxl-c-plus-plus'></i>
+                <span class="logo_name">CodingLab</span>
+            </div>
+
+            <nav class="navbar">
+                <a href="#" class="active">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </nav>
+
+            <div class="social-media">
+                <a href="#" style="--i:1;"><i class='bx bxl-twitter'></i></a>
+                <a href="#" style="--i:2;"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="#" style="--i:3;"><i class='bx bxl-instagram-alt'></i></a>
+                
+              </div>
+        </header>
+
+        <div class="container">
+        <section class="home">
+            <div class="home-content">
+                <h1 id="title">
+                    Coding Survey Form
+                </h1>
+                <p id="description">
+                    Please fill in all the details
+                </p>
+            </div>
+        </section>
+
+        <form action="" id="survey-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" class="formControl" placeholder="Enter your Full Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="formControl" placeholder="Enter your Email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" name="age" id="age" class="formControl" placeholder="Enter your Age" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address <span class="clue">(optional)</span></label>
+                <input type="text" name="address" id="address" class="formControl" placeholder="Enter your Address">
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country: </label>
+                <input type="text" id="country" list="countryList" oninput="updateCountryCode">
+                <datalist id="countryList">
+                    <option value="USA">
+                    <option value="Canada">
+                    <option value="UK">
+                    <option value="Kenya">
+                  
+                </datalist>
+            </div>
+
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number: </label>
+                <input type="text" id="phoneNumber" placeholder="(XXX) XXX-XXXX">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Alternative Number</label>
+                <input type="tel" name="phone" id="phone" class="formControl" placeholder="Enter your Phone Number" required>
+            </div>
+
+            <div class="form-group">
+                <p id="quest">Which option best describes your current role</p>
+                <select name="role" required id="dropdown" class="formControl">
+                    <option value="" disabled selected>Select Your Current Role</option>
+                    <option value="Student">Student</option>
+                    <option value="Job">Job</option>
+                    <option value="Teacher">Teacher</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p id="quest">Select your School</p>
+                <select name="school" required id="schoolDropdown" class="formControl">
+                    <option value="" disabled selected>Select your School</option>
+                    <option value="KCA University">KCA University</option>
+                    <option value="The University of Nairobi">The University of Nairobi</option>
+                    <option value="Maseno University">Maseno University</option>
+                    <option value="Mount Kenya University">Mount Kenya University</option>
+                    <option value="Eldoret University">Eldoret University</option>
+                    <option value="Kibabii University">Kibabii University</option>
+                    <option value="Machakos University">Machakos University</option>
+                    <option value="Murang'a University">Murang'a University</option>
+                    <option value="Kenyatta University">Kenyatta University</option>
+                    <option value="Jomo Kenyatta University">Jomo Kenyatta University</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p id="quest">Which programming language would you like to learn?</p>
+                <label for="js">
+                    <input type="checkbox" name="prefer" class="checkbox" id="js" value="JavaScript"> JavaScript
+                </label>
+                <label for="python">
+                    <input type="checkbox" name="prefer" class="checkbox" id="python" value="Python"> Python
+                </label>
+                <label for="java">
+                    <input type="checkbox" name="prefer" class="checkbox" id="java" value="Java"> Java
+                </label>
+                <label for="csharp">
+                    <input type="checkbox" name="prefer" class="checkbox" id="csharp" value="C#"> C#
+                </label>
+                <label for="cplusplus">
+                    <input type="checkbox" name="prefer" class="checkbox" id="cplusplus" value="C/C++"> C/C++
+                </label>
+                <label for="php">
+                    <input type="checkbox" name="prefer" class="checkbox" id="php" value="PHP"> PHP
+                </label>
+                <label for="other">
+                    <input type="checkbox" name="prefer" class="checkbox" id="other" value="other"> Other
+                </label>
+            </div>
+
+            <div class="form-group">
+                <p id="quest">Please tell us more about you and why we should consider you for the program.</p>
+                <textarea name="feedback"  cols="30" rows="5"  id="feedback" class="textarea" placeholder="Please type  here..." required></textarea>
+            </div>
+
+            <button type="submit" id="submit-button">Submit</button>
+        </form>
+    </div>
+
+    <script src="jay.js"></script>
+</body>
+</html>
